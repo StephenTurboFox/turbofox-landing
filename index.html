@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TurboFox — Business & Consciousness Are One</title>
+  <meta name="description" content="TurboFox brings together business strategy, spiritual intelligence, and conscious entrepreneurship. Find yourself, make money, and benefit others — all at the same time." />
+  <link rel="alternate" hreflang="en" href="https://turbofox.co/" />
+  <link rel="alternate" hreflang="fr" href="https://turbofox.co/fr/" />
+  <link rel="canonical" href="https://turbofox.co/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TurboFox — Business & Consciousness Are One" />
+  <meta property="og:description" content="Find yourself, make money, and benefit others — all at the same time." />
+  <meta property="og:url" content="https://turbofox.co/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="TurboFox" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TurboFox — Business & Consciousness Are One" />
+  <meta name="twitter:description" content="Find yourself, make money, and benefit others — all at the same time." />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TurboFox",
+    "url": "https://turbofox.co/",
+    "logo": "https://turbofox.co/turbofox-logo.svg",
+    "description": "TurboFox brings together business strategy, spiritual intelligence, and conscious entrepreneurship.",
+    "foundingDate": "2026",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@turbofox.co",
+      "contactType": "general"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f13;
+      --bg-secondary: #16161d;
+      --text: #e8e6e3;
+      --text-muted: #88849c;
+      --orange: #FF6B35;
+      --orange-hover: #ff8254;
+      --orange-glow: rgba(255, 107, 53, 0.15);
+      --border: rgba(255, 107, 53, 0.12);
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ===== Language Switcher ===== */
+    .lang-switch {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 100;
+      display: flex;
+      gap: 0.25rem;
+      background: rgba(22, 22, 29, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      padding: 0.25rem;
+    }
+
+    .lang-switch a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.4rem 0.9rem;
+      border-radius: 2rem;
+      transition: all 0.25s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch a.active {
+      background: var(--orange);
+      color: #fff;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, var(--orange-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 2.5rem;
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.15;
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 .highlight {
+      color: var(--orange);
+      font-style: italic;
+    }
+
+    .hero .tagline {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--orange);
+      opacity: 0.4;
+      margin-bottom: 2rem;
+    }
+
+    .hero .sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 480px;
+      font-style: italic;
+    }
+
+    /* ===== CTA Button ===== */
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(255, 107, 53, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    /* ===== Scroll indicator ===== */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.4;
+      animation: fadeInOut 3s ease-in-out infinite;
+    }
+
+    .scroll-indicator span {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .scroll-indicator .line {
+      width: 1px;
+      height: 30px;
+      background: linear-gradient(to bottom, var(--text-muted), transparent);
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.6; }
+    }
+
+    /* ===== Stats / Philosophy Section ===== */
+    .philosophy {
+      padding: 6rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .pillar {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: var(--bg-secondary);
+      transition: all 0.3s ease;
+    }
+
+    .pillar:hover {
+      border-color: rgba(255, 107, 53, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .pillar .icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ===== Contact Section ===== */
+    .contact {
+      padding: 5rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-email {
+      display: inline-block;
+      color: var(--orange);
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      word-break: break-all;
+    }
+
+    .contact-email:hover {
+      border-bottom-color: var(--orange);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--orange);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .hero-logo { width: 130px; }
+      .lang-switch { top: 1rem; right: 1rem; }
+      .philosophy-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 92vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <nav class="lang-switch" aria-label="Language selector">
+    <a href="/" class="active" lang="en" title="English">EN</a>
+    <a href="/fr/" lang="fr" title="Français">FR</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="/turbofox-logo.svg" alt="TurboFox logo — a fox leaping between earth and sky" class="hero-logo" width="180" height="203" />
+
+    <h1>
+      Business &amp;<br />
+      <span class="highlight">Consciousness</span><br />
+      Are One
+    </h1>
+
+    <p class="tagline">
+      Find yourself, make money, and benefit others — all at the same time.
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="sub">
+      A new kind of venture where strategy meets soul, and profit meets purpose.
+    </p>
+
+    <div style="margin-top: 2.5rem;">
+      <a href="#philosophy" class="btn btn-outline">Discover more</a>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section id="philosophy" class="philosophy">
+    <h2 class="section-title">Built on three pillars</h2>
+    <p class="section-sub">
+      TurboFox exists at the intersection of what works and what matters.
+    </p>
+
+    <div class="philosophy-grid">
+      <article class="pillar">
+        <span class="icon">🦊</span>
+        <h3>Business Strategy</h3>
+        <p>Real estate, ventures, and investments grounded in rigorous thinking and sharp execution.</p>
+      </article>
+
+      <article class="pillar">
+        <span class="icon">🌌</span>
+        <h3>Conscious Intelligence</h3>
+        <p>Spiritual depth, human understanding, and the wisdom that comes from knowing yourself.</p>
+      </article>
+
+      <article class="pillar">
+        <span class="icon">🌍</span>
+        <h3>Collective Impact</h3>
+        <p>Building ventures that don't just profit — they elevate. For the self, the community, and the world.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Let's connect</h2>
+    <p>Whether you have a question, an idea, or a project in mind.</p>
+    <a href="mailto:hello@turbofox.co" class="contact-email">hello@turbofox.co</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <a href="/">TurboFox</a>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
